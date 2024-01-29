@@ -21,6 +21,7 @@ export default class ObjectSetter extends Component<{
 }> {
   render() {
     const { mode, forceInline = 0, ...props } = this.props;
+    console.log('mode', mode, "forceInline", forceInline);
     if (forceInline || mode === 'popup') {
       if (forceInline > 2 || mode === 'popup') {
         // popup

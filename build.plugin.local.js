@@ -26,7 +26,7 @@ module.exports = ({ context,onGetWebpackConfig }) => {
     config
       .plugin('define')
       .use(context.webpack.DefinePlugin, [{
-        'process.env.API': '"at.alicdn.com"',
+        'process.env.API': '"localhost"',
       }]);
     // console.log('====context',context.command)
 

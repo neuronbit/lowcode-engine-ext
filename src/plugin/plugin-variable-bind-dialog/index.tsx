@@ -79,15 +79,13 @@ export default class VariableBindDialog extends Component<PluginProps> {
   }
 
   componentDidMount() {
+    console.log('plugin-variable-bind-dialog did mount', event)
     event.on('common:variableBindDialog.openDialog', ({ field }) => {
       this.setState({ field }, () => {
         this.initCode();
         this.openDialog();
       });
     });
-
-    
-
   }
 
   exportSchema = () => {
@@ -531,7 +529,7 @@ export default class VariableBindDialog extends Component<PluginProps> {
     const {isOverFlowMaxSize,maxTextSize} = this.state;
     return (
       isOverFlowMaxSize ? <span className='error-message'>表达式文本不能超过{maxTextSize}个字符，请换成函数调用</span> :null
-      
+
     )
   }
 
@@ -570,7 +568,7 @@ export default class VariableBindDialog extends Component<PluginProps> {
               src="https://img.alicdn.com/imgextra/i2/O1CN01HzeCND1vl948xPEWm_!!6000000006212-55-tps-200-200.svg"
             />
             <span onClick={() => this.minimizeClick(false)} className="vs-variable-minimize-title">
-              变量绑定
+              变量绑定1234
             </span>
             <img
               onClick={this.closeDialog}

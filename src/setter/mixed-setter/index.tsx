@@ -201,7 +201,6 @@ export default class MixedSetter extends Component<{
   private useSetter = (name: string, usedName: string) => {
     this.fromMixedSetterSelect = true;
     const { field } = this.props;
-
     if (name === 'VariableSetter') {
       const setterComponent = getSetter('VariableSetter')?.component as any;
       if (setterComponent && setterComponent.isPopup) {
@@ -443,7 +442,6 @@ export default class MixedSetter extends Component<{
           actions: ReactNode;
         }
       | undefined;
-
     if (this.hasVariableSetter) {
       // polyfill vision variable setter logic
       const setterComponent = getSetter('VariableSetter')?.component as any;

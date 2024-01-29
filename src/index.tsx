@@ -192,7 +192,6 @@ const engineExt = {
     SlotSetter: DataSlotSetter,
     ArraySetter: DataArraySetter,
     ObjectSetter: DataObjectSetter,
-    TitleSetter,
   },
 
   setterMap: {
@@ -221,7 +220,6 @@ const engineExt = {
     SlotSetter: DataSlotSetter,
     ArraySetter: DataArraySetter,
     ObjectSetter: DataObjectSetter,
-    TitleSetter,
   },
 
   pluginMap: {

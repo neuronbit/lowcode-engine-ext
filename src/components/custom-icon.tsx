@@ -1,8 +1,8 @@
-import { Icon } from '@alifd/next';
+import {Icon} from '@alifd/next';
 import * as React from 'react';
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 
-const ICON_URL = '//at.alicdn.com/t/a/font_2761185_ccl8ob63gmj.js';
+const ICON_URL = `//${process.env.API}/t/a/font_2761185_ccl8ob63gmj.js`;
 
 let CustomIcon: any;
 
@@ -21,18 +21,17 @@ interface IconProps {
 }
 
 
-
 export default (props: IconProps) => {
-  const { type, size, className = '', style = {} } = props;
+  const {type, size, className = '', style = {}} = props;
   useEffect(() => {
-    if(!CustomIcon){
+    if (!CustomIcon) {
       CustomIcon = Icon.createFromIconfontCN({
         scriptUrl: ICON_URL,
       });
     }
-   
+
   }, []);
   return (
-    <>{CustomIcon && <CustomIcon type={type} size={size} className={className} style={style} />}</>
+    <>{CustomIcon && <CustomIcon type={type} size={size} className={className} style={style}/>}</>
   );
 };
